@@ -1,0 +1,121 @@
+#scene-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, rgb(15, 10, 40), rgb(0, 0, 10));
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  a-scene {
+    z-index: -1;
+  }
+  
+  .star, .star-small {
+    z-index: 0;
+  }
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: twinkle 4s infinite ease-in-out;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  .star-small {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: twinkle-small 4s infinite ease-in-out;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes twinkle-small {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  overflow: auto;
+
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 25px;
+  font-family: "Arial", sans-serif;
+  text-align: justify;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  top: -10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Title */
+#modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+/* Modal List */
+#modal-info {
+  font-size: 18px;
+  color: #4a4a4a;
+  list-style-type: none;
+  
+}
+
+#modal-info li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
